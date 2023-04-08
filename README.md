@@ -1,5 +1,7 @@
 # Online Rental Service
 
+The application that I wrote for the 'interactive project' course assignment at university.
+
 ## Features
 
 * User account (registration, editing account information, changing password)
