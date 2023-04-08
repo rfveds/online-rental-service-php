@@ -18,7 +18,7 @@ The application that I wrote for the 'interactive project' course assignment at 
 * Registered user has the ability to preview currently borrowed resources
 * User account management by the administrator (changing password, changing information)
 
-## Database 
+## Database schema
 ![screenshot](./diagram.png)
 
 # Docker Symfony
