@@ -23,8 +23,8 @@ Server installation
 
 4. Run the following commands in the project directory:
 		
-		```
-		composer install	
-		php bin/console doctrine:migrations:migrate
-		php bin/console doctrine:fixtures:load
-		```
+```
+composer install
+php bin/console doctrine:migrations:migrate
+php bin/console doctrine:fixtures:load
+```
