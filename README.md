@@ -100,7 +100,7 @@ DATABASE_URL=mysql://sf:sf@mysql:3306/sf?serverVersion=5.7
 * `docker-compose exec mysql bash` - enter into MySQL container
 * `docker-compose exec apache bash` - enter into Apache2 container
 
-## Server installation
+# Server installation
 
 1. Copy the "app" directory to the server.
 
