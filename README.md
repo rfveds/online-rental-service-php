@@ -1,3 +1,24 @@
+# Online Rental Service
+
+The application that I wrote for the 'interactive project' course assignment at university.
+
+## Features
+
+* User account (registration, editing account information, changing password)
+* Administrator (login, changing password, changing administrator information)
+* Administrator with the ability to create, edit and delete content on the website, and an unregistered user with the ability to browse content on the     website and borrow resources
+* CRUD for catalog items (books, music, etc.)
+* CRUD for categories, linking categories with items
+* CRUD for publishers, linking publishers with items
+* CRUD for tags, tagging resources
+* Filtering the list of items based on tags
+* Displaying the list of items for a given category
+* List of records from newest to oldest with pagination of 10 records per page
+* Borrowing resources only for registered users
+* Registered user has the ability to preview currently borrowed resources
+* User account management by the administrator (changing password, changing information)
+
+
 # Docker Symfony
 
 Starter kit is based on [The perfect kit starter for a Symfony 4 project with Docker and PHP 7.2](https://medium.com/@romaricp/the-perfect-kit-starter-for-a-symfony-4-project-with-docker-and-php-7-2-fda447b6bca1).
@@ -80,3 +101,33 @@ DATABASE_URL=mysql://sf:sf@mysql:3306/sf?serverVersion=5.7
 * `docker-compose exec php bash` - enter into PHP container
 * `docker-compose exec mysql bash` - enter into MySQL container
 * `docker-compose exec apache bash` - enter into Apache2 container
+
+# Server installation
+
+1. Copy the "app" directory to the server.
+
+2. Set the database access parameters in the .env file.
+
+3. Create a file named .htaccess in the "public" directory with the following content:
+```
+ <IfModule mod_rewrite.c>
+ 	Options -MultiViews
+ 	RewriteEngine On
+	RewriteCond %{REQUEST_FILENAME} !-f
+ 	RewriteRule ^(.*)$ index.php [QSA,L]
+ </IfModule>
+ <IfModule !mod_rewrite.c>
+ <IfModule mod_alias.c>
+	RedirectMatch 302 ^/$ /index.php/
+ </IfModule>
+ </IfModule>
+ ```
+
+4. Run the following commands in the project directory:
+		
+```
+composer install
+php bin/console doctrine:migrations:migrate
+php bin/console doctrine:fixtures:load
+```
+
