@@ -1,3 +1,22 @@
+# Online Rental Service
+
+## Features
+
+* User account (registration, editing account information, changing password)
+* Administrator (login, changing password, changing administrator information)
+* Administrator with the ability to create, edit and delete content on the website, and an unregistered user with the ability to browse content on the     website and borrow resources
+* CRUD for catalog items (books, music, etc.)
+* CRUD for categories, linking categories with items
+* CRUD for publishers, linking publishers with items
+* CRUD for tags, tagging resources
+* Filtering the list of items based on tags
+* Displaying the list of items for a given category
+* List of records from newest to oldest with pagination of 10 records per page
+* Borrowing resources only for registered users
+* Registered user has the ability to preview currently borrowed resources
+* User account management by the administrator (changing password, changing information)
+
+
 # Docker Symfony
 
 Starter kit is based on [The perfect kit starter for a Symfony 4 project with Docker and PHP 7.2](https://medium.com/@romaricp/the-perfect-kit-starter-for-a-symfony-4-project-with-docker-and-php-7-2-fda447b6bca1).
